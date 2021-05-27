@@ -95,8 +95,8 @@ class Login extends React.Component{
             <div className="Login">
                 <section id="loginPage">
                     <h2>Login</h2>
-                    <p className = "demo">Example:</p>
-                    <p className = "demo">email: JohnySmith@gmail.com</p>
+                    <p className = "demo">use to demo</p>
+                    <p className = "demo">email: demo3@gmail.com</p>
                     <p className = "demo">password: Password3</p>
 
                     <form className="loginForm" onSubmit={this.loginUser}>

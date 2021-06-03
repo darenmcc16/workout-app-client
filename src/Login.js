@@ -89,8 +89,8 @@ class Login extends React.Component{
         const msg = this.state.error?
         <div>
             {this.state.error}
-        </div>:
-        <div></div>;
+        </div>
+        <div></div>
         return(
             <div className="Login">
                 <section id="loginPage">

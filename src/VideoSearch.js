@@ -18,7 +18,7 @@ class VideoSearch extends React.Component {
     }
 
     componentDidMount() {
-        let currentUser = TokenService.getUserId();
+        let currentUser = TokenService.getUserId()
         console.log(currentUser)
 
         //if the user is not logged in, send him to landing page
@@ -90,7 +90,7 @@ class VideoSearch extends React.Component {
     //get the imput from the user
     handleSearch = (e) => {
         e.preventDefault()
-        let currentUser = TokenService.getUserId();
+        let currentUser = TokenService.getUserId()
         // console.log(currentUser)
 
         //create an object to store the search filters
@@ -140,7 +140,7 @@ class VideoSearch extends React.Component {
             .then(data => {
 
                 //check if there is meaningful data
-                console.log(data);
+                console.log(data)
 
                 // check if there are no results
                 if (data.totalItems === 0) {
@@ -169,7 +169,7 @@ class VideoSearch extends React.Component {
                         description: this.checkString(description),
                     }
 
-                    return validatedOutput;
+                    return validatedOutput
                 })
 
                 //check if the validated data is structured in a new array objects

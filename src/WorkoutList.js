@@ -6,18 +6,18 @@ import TokenService from './service/token-service'
 
 class WorkoutList extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             workoutsByUserId: [],
 
-        };
+        }
     }
 
 
 
     componentDidMount() {
 
-        let currentUser = TokenService.getUserId();
+        let currentUser = TokenService.getUserId()
         // console.log(currentUser)
 
         //if the user is not logged in, send him to landing page
@@ -29,7 +29,7 @@ class WorkoutList extends React.Component {
 
 
 
-        let getWorkoutByUserIdUrl = `${API_ENDPOINT}/workout-plan/user/${currentUser}`;
+        let getWorkoutByUserIdUrl = `${API_ENDPOINT}/workout-plan/user/${currentUser}`
 
         fetch(getWorkoutByUserIdUrl)
             .then((videoInList) => videoInList.json())
@@ -37,11 +37,11 @@ class WorkoutList extends React.Component {
                 console.log(videoInList)
                 this.setState({
                     workoutsByUserId: videoInList,
-                });
-                // console.log(this.state);
+                })
+                // console.log(this.state)
             })
 
-            .catch((error) => this.setState({ error }));
+            .catch((error) => this.setState({ error }))
     }
 
     
@@ -116,8 +116,7 @@ class WorkoutList extends React.Component {
 
                 </section>
             </div>
-        );
+        )
     }
 }
-
-export default WorkoutList;
+export default WorkoutList

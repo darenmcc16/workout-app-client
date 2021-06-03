@@ -5,7 +5,7 @@ import TokenService from './service/token-service'
 
 class Register extends React.Component{
     constructor(props){
-        super(props);
+        super(props)
         this.state = {
             user_name: {
                 value: "",
@@ -19,83 +19,83 @@ class Register extends React.Component{
                 value: "",
                 touched: false,
             },
-        };
+        }
     }
 
     changeUsername(user_name){
         this.setState({
             user_name: {value: user_name, touched: true}
-        });
+        })
     }
 
     changePassword(password){
         this.setState({
             password: {value: password, touched: true}
-        });
+        })
     }
 
     updateRepeatPassword(repeatPassword) {
         this.setState({
             repeatPassword: { value: repeatPassword, touched: true },
-        });
+        })
     }
 
     validateUsername(){
-        const user_name = this.state.user_name.value.trim();
+        const user_name = this.state.user_name.value.trim()
         if(user_name.length === 0){
-            return <p className="input-error">Please enter a Username</p>;
+            return <p className="input-error">Please enter a Username</p>
         }
         else if(user_name.length<5){
             return (
                 <p className="input-error">
                     Username must be at least 5 characters long.
                 </p>
-            );
+            )
         }
     }
 
     validatePassword(){
-        const password = this.state.password.value.trim();
+        const password = this.state.password.value.trim()
         if(password.length === 0){
-            return <p className="input-error">Password is required</p>;
+            return <p className="input-error">Password is required</p>
         }
         else if(password.length < 8 || password.length > 72){
             return(
                 <p className="input-error">
                     Password must be between 8 and 72 characters long.
                 </p>
-            );
+            )
         }
         else if(!password.match(/[0-9]/)){
             return(
                 <p className="input-error">
                     Password must contain at least one number.
                 </p>
-            );
+            )
         }
     }
 
     validateRepeatPassword() {
-        const repeatPassword = this.state.repeatPassword.value.trim();
-        const password = this.state.password.value.trim();
+        const repeatPassword = this.state.repeatPassword.value.trim()
+        const password = this.state.password.value.trim()
         if (repeatPassword !== password) {
-            return <p className="input-error">Passwords do not match</p>;
+            return <p className="input-error">Passwords do not match</p>
         }
     }
 
 
     registerUser = (event) =>{
-        event.preventDefault();
-        const data = {};
-        const formData = new FormData(event.target);
+        event.preventDefault()
+        const data = {}
+        const formData = new FormData(event.target)
         for(let value of formData){
-            data[value[0]] = value[1];
+            data[value[0]] = value[1]
         }
-        console.log(data);
+        console.log(data)
 
         let {user_name,
             password,
-        } = data;
+        } = data
         console.log(data)
 
         this.setState({error: null})
@@ -120,7 +120,7 @@ class Register extends React.Component{
         <p>
             {this.state.error}
         </p>:
-        <div></div>;
+        <div></div>
 
         return(
             <div className='SignUp'>
@@ -178,8 +178,8 @@ class Register extends React.Component{
                     </div>
                 </section>
             </div>
-        );
+        )
     }
 }
 
-export default Register;
+export default Register

@@ -3,8 +3,8 @@
 No longer going to the gym or need new workouts to push yourself.  You can create a exercise plan that best fits you at Gym Hero.
 
 
-### 1. Working Prototype (do later)
-(Example) You can access a working prototype of the React app here: https://workout-app-client.vercel.app/ and Node app here: https://restaurant-finder-serv.herokuapp.com/
+### 1. Working Prototype
+You can access a working prototype of the React app here: https://workout-app-client.vercel.app/ and Node app here: https://gym-hero-thinkful.herokuapp.com/
 
 
 
@@ -52,7 +52,7 @@ The app's functionality includes:
 
 
 
-### 5. Wireframes (to do now)
+### 5. Wireframes
 Landing Page
 :-------------------------:
 ![Landing Page](/github-images/client-wireframe.JPG)
@@ -78,15 +78,12 @@ Landing Page
     * id (auto-generated)
     * username (email validation)
     * password (at least 8 chars, at least one alpha and a special character validation)
-* Favorites table
+* Workout list table
     * id (auto-generated)
     * user id (forign key user table)
-    * yelp_id (from api varchar 255)
+    * videoId (from api varchar 255)
     * name (from api varchar 255)
-    * phone (from api varchar 255)
     * url (from api varchar 255)
-    * price (from api varchar 5)
-    * rating (from api varchar 4)
 
 
 
@@ -136,18 +133,17 @@ Landing Page
 
 
 
-### 9. Screenshots (to do later)
-(Example) Landing Page
-:-------------------------:
-![Landing Page](/github-images/screenshots/landing.jpg)
+### 9. Screenshots
+Landing Page
+![Landing Page](/github-images/landing-page.JPG)
 Sign up page
-![Register Page](/github-images/screenshots/singup.jpg)
+![Register Page](/github-images/register.JPG)
 Login Page
-![Login Page](/github-images/screenshots/login.jpg)
-Business Search Page
-![Business Search Page](/github-images/screenshots/business-search.jpg)
-Favorites Page
-![Favorites Page](/github-images/screenshots/favorites.jpg)
+![Login Page](/github-images/login.JPG)
+Workout Search Page
+![Workout Search Page](/github-images/wokout-search.JPG)
+Workout List Page
+![Workout List Page](/github-images/workout-list.JPG)
 
 
 

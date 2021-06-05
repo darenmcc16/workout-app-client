@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 
 
 class SearchResults extends React.Component {
@@ -15,7 +15,7 @@ class SearchResults extends React.Component {
                         <form onSubmit={this.props.handleAddWorkout}>
                         <h4>{this.props.title}</h4>
                         <p>{this.props.description}</p>
-                        <a href={videoUrl} target='_blank'>
+                        <a href={videoUrl} target='_blank' rel="noopener noreferrer">
                         <img src={this.props.thumbnail.url} /></a>
                         <input type='hidden' name='video_id' defaultValue={this.props.video_id} />
                         <input type='hidden' name='user_id' defaultValue={this.props.user_id} />
@@ -30,6 +30,15 @@ class SearchResults extends React.Component {
         }  
     }
 
-
+    SearchResults.propTypes = {
+        // classes: PropTypes.object.isRequired,
+        handleAddWorkout: PropTypes.func.isRequired,
+        // order: PropTypes.oneOf(['asc', 'desc']).isRequired,
+        thumbnail: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        video_id: PropTypes.number.isRequired,
+        user_id: PropTypes.number.isRequired,
+      };
 
 export default SearchResults

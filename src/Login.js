@@ -19,20 +19,20 @@ class Login extends React.Component{
             LogInUserID: 0,
             error: null,
         }
-    };
+    }
 
     
 
     changeUsername(userName){
         this.setState({
             userName: {value: userName},
-        });
+        })
     }
 
     changePassword(password){
         this.setState({
             password: {value: password},
-        });
+        })
     }
 
     validateUserName() {
@@ -42,7 +42,7 @@ class Login extends React.Component{
         } else if (userName.length < 2) {
             return (
                     "Username must be at least 2 characters long"
-            );
+            )
         }
     }
 
@@ -53,19 +53,19 @@ class Login extends React.Component{
         } else if (password.length < 6 || password.length > 72) {
             return (
                     "Password must be between 6 and 72 characters long."
-            );
+            )
         } else if (!password.match(/[0-9]/)) {
             return (
 
                     "Password must contain at least one number."
 
-            );
+            )
         }
     }
 
     loginUser = (event) =>{
         event.preventDefault();
-        const {userName, password} = event.target;
+        const {userName, password} = event.target
         AuthApiService.postLogin({
             user_name: userName.value,
             password: password.value,
@@ -73,9 +73,9 @@ class Login extends React.Component{
 
         .then((response) =>{
             TokenService.saveAuthToken(response.authToken);
-            TokenService.saveUserId(response.userId);
+            TokenService.saveUserId(response.userId)
             console.log(TokenService.getUserId())
-            window.location = "/business-search";
+            window.location = "/business-search"
         })
         .catch((err) =>{
             console.log(err)
@@ -89,7 +89,7 @@ class Login extends React.Component{
         const msg = this.state.error?
         <div>
             {this.state.error}
-        </div>
+        </div>:
         <div></div>
         return(
             <div className="Login">

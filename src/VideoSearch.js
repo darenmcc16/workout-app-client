@@ -90,7 +90,7 @@ class VideoSearch extends React.Component {
     //get the imput from the user
     handleSearch = (e) => {
         e.preventDefault()
-        let currentUser = TokenService.getUserId()
+        // let currentUser = TokenService.getUserId()
         // console.log(currentUser)
 
         //create an object to store the search filters
@@ -194,7 +194,7 @@ class VideoSearch extends React.Component {
 
     handleAddWorkout = (e) => {
         e.preventDefault()
-        let currentUser = TokenService.getUserId();
+        // let currentUser = TokenService.getUserId()
         // console.log(currentUser)
         //create an object to store the search filters
         const data = {}

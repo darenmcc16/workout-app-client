@@ -76,7 +76,7 @@ class WorkoutList extends React.Component {
                         <tr>  
                             <td>{item.title}</td>
                             <td>{item.description}</td>
-                            <a href={videoUrl} target='_blank'>
+                            <a href={videoUrl} target='_blank' rel="noopener noreferrer">
                             <img src={item.thumbnail} alt={item.title} className='workoutListImg' />
                             </a>
                         </tr>

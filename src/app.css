@@ -78,7 +78,7 @@ button {
   a {
     font-size: 20px;
     text-decoration: none;
-    color: white;
+    color: blue;
     padding: 15px;
   }
   
@@ -137,7 +137,7 @@ button {
     padding: 14px;
     border-bottom: 1px solid lightgrey;
     display: block;
-    background-color: grey;
+    background-color: lightgray;
   }
 
   .description{
